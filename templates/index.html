@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Logaritmo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Logaritmo</h1>
+        <form action="/calcular" method="post">
+            <label for="numero">Número:</label>
+            <input type="number" step="any" name="numero" required>
+            <br>
+            <label for="tipo_logaritmo">Tipo de Logaritmo:</label>
+            <select name="tipo_logaritmo" required>
+                <option value="log">log</option>
+                <option value="ln">ln</option>
+            </select>
+            <br>
+            <input type="submit" value="Calcular">
+        </form>
+    </div>
+</body>
+</html>
